@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Declares the document type and language as English -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Sets the character encoding to UTF-8 to support various characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is responsive and scales correctly on different devices -->
+    <title>Drainage Situation in Coastal Kenya</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            /* Sets the font for the entire page */
+            margin: 0;
+            /* Removes default margin around the page */
+            padding: 0;
+            /* Removes default padding around the page */
+            background-color: #f4f4f9;
+            /* Sets a light gray background color for the page */
+            color: #333;
+            /* Sets the text color to dark gray */
+        }
+
+        header {
+            background-color: #004d66;
+            /* Sets a dark blue background color for the header */
+            color: #fff;
+            /* Sets the text color in the header to white */
+            padding: 10px 0;
+            /* Adds padding above and below the header content */
+            text-align: center;
+            /* Centers the text inside the header */
+        }
+
+        nav ul {
+            list-style: none;
+            /* Removes bullet points from the list */
+            padding: 0;
+            /* Removes default padding from the list */
+        }
+
+        nav ul li {
+            display: inline;
+            /* Displays list items in a single line */
+            margin-right: 20px;
+            /* Adds space between list items */
+        }
+
+        nav ul li a {
+            color: #fff;
+            /* Sets the link color to white */
+            text-decoration: none;
+            /* Removes the underline from the links */
+            font-weight: bold;
+            /* Makes the link text bold */
+        }
+
+        main {
+            padding: 20px;
+            /* Adds padding around the main content */
+        }
+
+        .introduction img {
+            width: 100%;
+            /* Makes the image span the full width of its container */
+            max-width: 600px;
+            /* Sets the maximum width of the image to 600px */
+            height: auto;
+            /* Adjusts the height automatically to maintain the aspect ratio */
+        }
+
+        .problems {
+            background-color: #e8f0f2;
+            /* Sets a light blue background color for the problems section */
+            padding: 15px;
+            /* Adds padding inside the problems section */
+            border-radius: 8px;
+            /* Rounds the corners of the problems section */
+        }
+
+        footer {
+            background-color: #004d66;
+            /* Sets a dark blue background color for the footer */
+            color: #fff;
+            /* Sets the text color in the footer to white */
+            text-align: center;
+            /* Centers the text inside the footer */
+            padding: 10px 0;
+            /* Adds padding above and below the footer content */
+            position: fixed;
+            /* Fixes the footer position at the bottom of the viewport */
+            width: 100%;
+            /* Makes the footer span the full width of the viewport */
+            bottom: 0;
+            /* Positions the footer at the bottom of the viewport */
+        }
+
+        .contact form {
+            max-width: 500px;
+            /* Limits the width of the form to 500px */
+            margin: 0 auto;
+            /* Centers the form horizontally */
+        }
+
+        .contact label {
+            display: block;
+            /* Makes each label display on its own line */
+            margin-bottom: 5px;
+            /* Adds space below each label */
+            font-weight: bold;
+            /* Makes the label text bold */
+        }
+
+        .contact input[type="email"],
+        .contact input[type="text"] {
+            width: 100%;
+            /* Makes the input fields span the full width of their container */
+            padding: 8px;
+            /* Adds padding inside the input fields */
+            margin-bottom: 10px;
+            /* Adds space below each input field */
+            border: 1px solid #ccc;
+            /* Sets a light gray border around the input fields */
+            border-radius: 4px;
+            /* Rounds the corners of the input fields */
+        }
+
+        .contact button {
+            padding: 10px 20px;
+            /* Adds padding inside the button */
+            background-color: #004d66;
+            /* Sets the background color of the button */
+            color: #fff;
+            /* Sets the text color of the button to white */
+            border: none;
+            /* Removes the default border around the button */
+            border-radius: 4px;
+            /* Rounds the corners of the button */
+            cursor: pointer;
+            /* Changes the cursor to a pointer when hovering over the button */
+        }
+
+        .contact button:hover {
+            background-color: #00688b;
+            /* Changes the background color of the button when hovered over */
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Includes the Chart.js library for creating charts -->
+</head>
+
+<body>
+    <header>
+        <h1>Coastal Kenya's Drainage Issues</h1>
+        <!-- Main heading of the webiste -->
+        <nav>
+            <!-- Navigation menu -->
+            <ul>
+                <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                <!-- Link to the Home section -->
+                <li><a href="#statistics" onclick="showPage('statistics')">Statistics</a></li>
+                <!-- Link to the Statistics section -->
+                <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+                <!-- Link to the Contact section -->
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- Main content area -->
+
+        <!-- Home Page -->
+        <section id="home" class="page">
+            <!-- Home section -->
+            <h2>Introduction</h2>
+            <p>The coastal region of Kenya faces significant challenges with drainage systems, impacting both urban and rural areas. This website explores the key issues, statistics, and possible solutions.</p>
+            <!-- Introduction paragraph -->
+            <img src="https://citizentv.obs.af-south-1.myhuaweicloud.com/92895/conversions/one-og_image.webp" alt="Railways changamwe flooding">
+            <!-- Image showing flooding in Changamwe -->
+            <img src="https://citizentv.obs.af-south-1.myhuaweicloud.com/92896/conversions/round-og_image.webp" alt="Roundabout flood">
+
+            <section class="problems">
+                <!-- Section for listing key problems -->
+
+                <h2>Key Problems</h2>
+                <!-- Subheading for the key problems -->
+
+                <h3>Poor Infrastructure</h3>
+
+                <p>
+                    Mombasa’s infrastructure issues date back to colonial times when development was driven by the needs of colonial powers rather than the local populace. The infrastructure, primarily built to serve trade and extractive industries, was poorly planned and underfunded, lacking consideration for the growing urban population's needs. Roads, bridges, and drainage systems were often neglected, resulting in a city ill-prepared to accommodate its expanding populace and evolving challenges. Even today, Mombasa struggles with outdated roads and limited public transportation options, impeding economic growth and daily life. The city's infrastructure deficits have led to frequent power outages, inefficient water distribution, and limited access to essential services, further hindering development. Attempts at modernization have been slow and fragmented, constrained by limited resources and political challenges. This ongoing struggle with inadequate infrastructure continues to impact Mombasa’s residents, highlighting the urgent need for strategic investment and a comprehensive approach to urban planning and development.
+                </p>
+
+                <ul>
+                    <li>Poor planning and underfunding</li>
+                    <!-- List item describing poor planning and underfunding -->
+                    <li>Neglected roads and bridges</li>
+                    <!-- List item describing neglected roads and bridges -->
+                    <li>Limited public transportation</li>
+                    <!-- List item describing limited public transportation -->
+                </ul>
+
+                <h3>Frequent Flooding</h3>
+
+                <p>
+                    Frequent flooding has become a persistent issue in Mombasa, significantly affecting the city's residents and infrastructure. This problem traces its roots back to colonial times, when infrastructure was poorly planned, with inadequate drainage systems that have failed to evolve with the city's growth. Heavy rains, particularly during the long and short rainy seasons, overwhelm these outdated drainage systems, leading to widespread flooding in both urban and rural areas. Streets become rivers, homes are inundated, and businesses face disruptions, causing severe economic and social consequences for the local community. Additionally, the rise in sea levels due to climate change exacerbates the situation, making Mombasa even more vulnerable to flooding. The recurrent nature of these floods damages roads, bridges, and buildings, leaving lasting scars on the cityscape. Addressing this issue requires not only improved infrastructure but also sustainable urban planning and environmental management strategies to mitigate the adverse effects of climate change.
+                </p>
+
+                <ul>
+                    <li>Outdated drainage systems</li>
+
+                    <li>Heavy rains during rainy seasons</li>
+
+                    <li>Climate change and rising sea levels</li>
+                    
+                </ul>
+
+                <h3>Inadequate Waste Management</h3>
+
+                <p>
+                    Inadequate waste management has long been a significant challenge in Mombasa, contributing to environmental degradation and health hazards since colonial times. The colonial administration's lack of planning for sustainable waste management left a legacy of neglect that persists today. Rapid urbanization has only exacerbated the problem, leading to overflowing landfills and waste-filled streets. Many neighborhoods in Mombasa lack proper waste collection services, forcing residents to dispose of waste in informal dumps or waterways, further exacerbating flooding issues. This mismanagement of waste clogs drainage systems and poses serious health risks, including the spread of diseases such as cholera and dengue fever. Moreover, the accumulation of plastic waste in the city's waterways has adverse effects on marine life, threatening the biodiversity of the coastal region. Addressing Mombasa's waste management issues requires comprehensive policy reforms, public education on waste disposal, and investment in modern waste treatment facilities to protect both the environment and the health of its citizens.
+                </p>
+                
+                <ul>
+                    <li>Overflowing landfills</li>
+                    <!-- List item describing overflowing landfills -->
+                    <li>Lack of waste collection services</li>
+                    <!-- List item describing lack of waste collection services -->
+                    <li>Health risks and environmental damage</li>
+                    <!-- List item describing health risks and environmental damage -->
+                </ul>
+            </section>
+        </section>
+
+        <!-- Statistics Page -->
+        <section id="statistics" class="page" style="display: none;">
+            <!-- Statistics section initially hidden -->
+            <h2>Key Statistics</h2>
+            <!-- Subheading for Key Statistics -->
+            <p>Here are some important statistics highlighting the drainage situation in the coastal region:</p>
+            <!-- Description for statistics section -->
+            <canvas id="drainageChart" width="200" height="200"></canvas>
+            <!-- Placeholder for the chart to display statistics -->
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page" style="display: none;">
+            <!-- Contact section initially hidden -->
+            <h2>Get Involved! Saidia pwani!</h2>
+            <!-- Heading for contact section -->
+            <form action="" method="post" onsubmit="submitForm(event)">
+                <!-- Form for user input -->
+                <label for="email">Email:</label>
+                <!-- Label for email input -->
+                <input type="email" id="email" name="email" required>
+                <!-- Email input field -->
+
+                <label for="signature">Signature:</label>
+                <!-- Label for signature input -->
+                <input type="text" id="signature" name="signature" required>
+                <!-- Signature input field -->
+
+                <button type="submit">Submit</button>
+                <!-- Submit button for the form -->
+            </form>
+            <div id="formResponse"></div>
+            <!-- Div to display form submission response -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer section -->
+        <p>&copy; 2024 Drainage Issues in Coastal Kenya. All rights reserved.</p>
+        <!-- Copyright notice -->
+    </footer>
+
+    <script>
+        // JavaScript for navigation and form handling
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Executes when the DOM is fully loaded
+            const ctx = document.getElementById('drainageChart').getContext('2d');
+            // Gets the drawing context for the chart on the canvas
+            const drainageChart = new Chart(ctx, {
+                type: 'bar',
+                // Sets the type of chart to bar
+                data: {
+                    labels: ['Mombasa', 'Kwale', 'Kilifi', 'Lamu', 'Tana River', 'Taita-Taveta'],
+                    // Labels for the x-axis
+                    datasets: [{
+                        label: 'Flood Events (2019-2024)',
+                        // Label for the dataset
+                        data: [15, 10, 12, 5, 7, 8],
+                        // Data points for the chart
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        // Color for the chart bars
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        // Border color for the chart bars
+                        borderWidth: 1
+                        // Width of the border around the bars
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                            // Ensures the y-axis starts at zero
+                        }
+                    }
+                }
+            });
+        });
+
+        function showPage(pageId) {
+            // Function to show a specific page and hide others
+            document.querySelectorAll('.page').forEach(function (page) {
+                // Hides all elements with class 'page'
+                page.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+            // Shows the element with the given ID
+        }
+
+        function submitForm(event) {
+            // Function to handle form submission
+            event.preventDefault();
+            // Prevents the default form submission behavior
+
+            const email = document.getElementById('email').value;
+            // Gets the value from the email input field
+            const signature = document.getElementById('signature').value;
+            // Gets the value from the signature input field
+
+            fetch('', {
+                method: 'POST',
+                // Sends a POST request
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    // Sets the content type of the request
+                },
+                body: `email=${encodeURIComponent(email)}&signature=${encodeURIComponent(signature)}`
+                // Encodes and sends the form data
+            })
+                .then(response => response.text())
+                // Converts the response to text
+                .then(data => {
+                    document.getElementById('formResponse').innerHTML = data;
+                    // Displays the server response
+                    document.getElementById('email').value = '';
+                    document.getElementById('signature').value = '';
+                    // Clears the form fields
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Logs any errors to the console
+                    document.getElementById('formResponse').innerHTML = 'An error occurred. Please try again.';
+                    // Displays an error message
+                });
+        }
+    </script>
+
+    <!-- PHP for form handling -->
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Checks if the form was submitted via POST method
+        $email = $_POST['email'];
+        $signature = $_POST['signature'];
+
+        // Log emails to a text file (emails.txt)
+        $file = fopen("emails.txt", "a");
+        // Opens the file in append mode
+        fwrite($file, "Email: $email, Signature: $signature\n");
+        // Writes the email and signature to the file
+        fclose($file);
+        // Closes the file
+
+        echo "Thank you for signing the petition!";
+        echo "Pwani utasaidika kuimarika!";
+        // Displays a thank you message
+    }
+    ?>
+</body>
+
+</html>
